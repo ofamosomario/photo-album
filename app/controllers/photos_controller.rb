@@ -3,7 +3,7 @@
 # Photos Controller
 class PhotosController < ApplicationController
   def index
-    @photos = Photo.all
+    @photos = Photo.all.order(:id)
 
     render json: @photos
   end
